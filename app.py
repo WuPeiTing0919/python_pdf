@@ -45,5 +45,5 @@ def generate_pdf(data: TextRequest, request: Request):
     c.save()
 
     return {
-        "download_url": str(request.base_url.rstrip("/")) + f"/static/{filename}"
+        "download_url": str(request.base_url).rstrip("/") + f"/static/{filename}"
     }
